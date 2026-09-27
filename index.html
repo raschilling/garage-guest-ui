@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Garage</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0; min-height: 100dvh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 20px;
+      font-family: -apple-system, system-ui, sans-serif;
+      background: #111; color: #eee; padding: 24px;
+    }
+    h1 { font-size: 1.25rem; font-weight: 600; margin: 0 0 8px; }
+    p { margin: 0; opacity: .65; font-size: .9rem; text-align: center; }
+    form { width: min(360px, 100%); }
+    button {
+      width: 100%; border: 0; border-radius: 16px; padding: 22px 16px;
+      font-size: 1.35rem; font-weight: 650; cursor: pointer;
+    }
+    .open { background: #2f9e44; color: #fff; }
+    .close { background: #c92a2a; color: #fff; }
+    button:active { transform: scale(.98); }
+  </style>
+</head>
+<body>
+  <h1>Vehicle garage</h1>
+  <p>Tap a button. Opening this page does nothing.</p>
+  <form action="https://rjcl8z04qe0o6mvejfjngc6kmtjyjvfa.ui.nabu.casa/api/webhook/gd-open-7k9qX2mR4pL8wN" method="post">
+    <button class="open" type="submit">Open</button>
+  </form>
+  <form action="https://rjcl8z04qe0o6mvejfjngc6kmtjyjvfa.ui.nabu.casa/api/webhook/gd-close-3tH6vB1cY9sE5a" method="post">
+    <button class="close" type="submit">Close</button>
+  </form>
+  <p>Does nothing unless guest access is armed.</p>
+</body>
+</html>
